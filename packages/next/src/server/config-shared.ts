@@ -441,6 +441,7 @@ export interface LoggingConfig {
 
 export interface ExperimentalConfig {
   adapterPath?: string
+  appNewScrollHandler?: boolean
   useSkewCookie?: boolean
   cacheHandlers?: {
     default?: string
@@ -1470,6 +1471,7 @@ export const defaultConfig = Object.freeze({
   allowedDevOrigins: undefined,
   experimental: {
     adapterPath: process.env.NEXT_ADAPTER_PATH || undefined,
+    appNewScrollHandler: false,
     useSkewCookie: false,
     cacheLife: {
       default: {
